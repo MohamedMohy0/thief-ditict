@@ -12,7 +12,7 @@ st.set_page_config(
 st.markdown(
     """
     <div style='text-align: center; padding: 20px;'>
-        <img src='logo.png' style='width:120px; height:120px; border-radius:50%; border: 2px solid #4e8f69;' />
+        <img src='logo.jpg' style='width:120px; height:120px; border-radius:50%; border: 2px solid #4e8f69;' />
     </div>
     """,
     unsafe_allow_html=True
