@@ -15,6 +15,14 @@ def connect_to_sheet():
 
 sheet = connect_to_sheet()
 
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
 # تصميم الواجهة بالعربية
 st.markdown(
     """
@@ -32,7 +40,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.title("🔍 البحث عن رقم داخل جدول جوجل")
+st.title(" البحث عن الرقم في داتا النصابين")
 
 رقم_البحث = st.text_input("أدخل الرقم الذي ترغب في البحث عنه:")
 
@@ -45,7 +53,7 @@ if st.button("بحث"):
         if رقم_البحث in البيانات:
             رقم_الصف = البيانات.index(رقم_البحث) + 2
             الصف_الكامل = sheet.row_values(رقم_الصف)
-            st.success(f"✅ الرقم {رقم_البحث} موجود في البيانات.")
+            st.success(f"✅ الرقم{رقم_البحث} نصاب و موجود في البيانات.")
             st.write("محتوى الصف:")
             st.table([الصف_الكامل])
         else:
