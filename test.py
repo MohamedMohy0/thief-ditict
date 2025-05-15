@@ -9,15 +9,7 @@ st.set_page_config(
      page_icon="logo.jpg",
     layout="centered"
 )
-st.image("logo.jpg", width=120 )
-st.markdown(
-    """
-    <div style='text-align: center; padding: 20px;'>
-        <img src='logo.png' style='width:120px; height:120px; border-radius:50%; border: 2px solid #4e8f69;' />
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+
 
 # إعداد الاتصال بـ Google Sheet
 @st.cache_resource
@@ -55,7 +47,10 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-st.write("الموقع مدعوم بالكامل من قبل فريق UFRC")
+col1, col2, col3 = st.columns([1, 2, 1])
+with col2:
+    st.image("logo.jpg", width=120 )
+    st.write("الموقع مدعوم بالكامل من قبل فريق UFRC")
 
 st.title(" البحث عن الرقم في داتا النصابين")
 
