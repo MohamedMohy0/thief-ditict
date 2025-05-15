@@ -3,6 +3,11 @@ import gspread
 import json
 from oauth2client.service_account import ServiceAccountCredentials
 
+
+st.set_page_config(
+    page_title="كشف النصابين",
+    layout="centered"
+)
 # إعداد الاتصال بـ Google Sheet
 @st.cache_resource
 def connect_to_sheet():
