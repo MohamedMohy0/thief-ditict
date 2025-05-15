@@ -6,6 +6,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 
 st.set_page_config(
     page_title="كشف النصابين",
+     page_icon="logo.jpg"
     layout="centered"
 )
 # إعداد الاتصال بـ Google Sheet
