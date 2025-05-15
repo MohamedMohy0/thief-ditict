@@ -43,7 +43,7 @@ st.markdown(
 st.title(" البحث عن الرقم في داتا النصابين")
 
 رقم_البحث = st.text_input("أدخل الرقم الذي ترغب في البحث عنه:")
-st.link_button("اضافة رقم نصاب ", url="https://example.comhttps://docs.google.com/forms/d/e/1FAIpQLSe3nP9yS7Bj227inkn5JH_jxI-1PD599qbkMj1QIfLKaHe5YQ/viewform")
+st.link_button("اضافة رقم نصاب ", url="https://docs.google.com/forms/d/e/1FAIpQLSe3nP9yS7Bj227inkn5JH_jxI-1PD599qbkMj1QIfLKaHe5YQ/viewform")
 
 if st.button("بحث"):
     if not رقم_البحث:
