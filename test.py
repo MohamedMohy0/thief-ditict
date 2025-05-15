@@ -9,14 +9,7 @@ st.set_page_config(
      page_icon="logo.jpg",
     layout="centered"
 )
-st.markdown(
-    """
-    <div style='text-align: center; padding: 20px;'>
-        <img src='logo.jpg' style='width:120px; height:120px; border-radius:50%; border: 2px solid #4e8f69;' />
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+st.image("logo.jpg", width=120, caption="الشعار")
 # إعداد الاتصال بـ Google Sheet
 @st.cache_resource
 def connect_to_sheet():
