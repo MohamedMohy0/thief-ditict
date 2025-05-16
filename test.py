@@ -53,14 +53,15 @@ col1, col2, col3 = st.columns([2, 3, 2])
 with col2:
     st.image("logo.jpg", width=120 )
     st.write("الموقع مدعوم بالكامل من قبل فريق UFRC")
-    st.markdown("لينك الجروب : https://chat.whatsapp.com/HHDi9FdBzKp09Qp27Rd9LU")
+st.markdown("لينك الجروب : https://chat.whatsapp.com/HHDi9FdBzKp09Qp27Rd9LU")
+st.markdown("تبليغ عن نصاب  : https://docs.google.com/forms/d/e/1FAIpQLSe3nP9yS7Bj227inkn5JH_jxI-1PD599qbkMj1QIfLKaHe5YQ/viewform")
+
 st.title(" البحث عن الرقم في داتا النصابين")
 
 
 # حقل إدخال مخصص بالاتجاه LTR
 رقم_البحث = st.text_input("أدخل الرقم الذي ترغب في البحث عنه:")
 
-st.link_button("اضافة رقم نصاب ", url="https://docs.google.com/forms/d/e/1FAIpQLSe3nP9yS7Bj227inkn5JH_jxI-1PD599qbkMj1QIfLKaHe5YQ/viewform")
 
 def تنظيف_الرقم(رقم):
     # حذف كل ما ليس رقماً
