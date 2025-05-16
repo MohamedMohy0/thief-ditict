@@ -2,6 +2,8 @@ import streamlit as st
 import gspread
 import json
 from oauth2client.service_account import ServiceAccountCredentials
+import re
+
 
 
 st.set_page_config(
@@ -62,7 +64,7 @@ st.link_button("اضافة رقم نصاب ", url="https://docs.google.com/forms
 
 def تنظيف_الرقم(رقم):
     # حذف كل ما ليس رقماً
-    return رقم.replace(" ","")
+    return re.sub(r"\D", "", رقم)
     
 n=رقم_البحث.replace(" ","")
 if st.button("بحث"):
