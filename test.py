@@ -60,8 +60,13 @@ st.markdown('<p style="text-align:right;">أدخل الرقم الذي ترغب 
 رقم_البحث = st.text_input("أدخل الرقم الذي ترغب في البحث عنه:")
 
 st.link_button("اضافة رقم نصاب ", url="https://docs.google.com/forms/d/e/1FAIpQLSe3nP9yS7Bj227inkn5JH_jxI-1PD599qbkMj1QIfLKaHe5YQ/viewform")
+
+def تنظيف_الرقم(رقم):
+    # حذف كل ما ليس رقماً
+    return رقم.replace(" ","")
+    
 n=رقم_البحث.replace(" ","")
-nn=البيانات.replace(" ","")
+البيانات_المنظفة = [تنظيف_الرقم(رقم) for رقم in البيانات]
 if st.button("بحث"):
     if not رقم_البحث:
         st.warning("يرجى إدخال رقم أولاً.")
@@ -74,7 +79,7 @@ if st.button("بحث"):
             st.success(f"✅ الرقم{رقم_البحث} نصاب و موجود في البيانات.")
             st.write("محتوى الصف:")
             st.table([الصف_الكامل])
-        elif n in البيانات :
+        elif n in لبيانات_المنظفة:
             رقم_الصف = البيانات.index(n) + 2
             الصف_الكامل = sheet.row_values(رقم_الصف)
             st.success(f"✅ الرقم{n} نصاب و موجود في البيانات.")
