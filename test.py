@@ -54,7 +54,6 @@ with col2:
     st.markdown("لينك الجروب : https://chat.whatsapp.com/HHDi9FdBzKp09Qp27Rd9LU")
 st.title(" البحث عن الرقم في داتا النصابين")
 
-st.markdown('<p style="text-align:right;">أدخل الرقم الذي ترغب في البحث عنه:</p>', unsafe_allow_html=True)
 
 # حقل إدخال مخصص بالاتجاه LTR
 رقم_البحث = st.text_input("أدخل الرقم الذي ترغب في البحث عنه:")
