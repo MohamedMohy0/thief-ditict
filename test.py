@@ -54,7 +54,18 @@ with col2:
     st.markdown("لينك الجروب : https://chat.whatsapp.com/HHDi9FdBzKp09Qp27Rd9LU")
 st.title(" البحث عن الرقم في داتا النصابين")
 
-رقم_البحث = st.text_input("أدخل الرقم الذي ترغب في البحث عنه:")
+st.markdown('<p style="text-align:right;">أدخل الرقم الذي ترغب في البحث عنه:</p>', unsafe_allow_html=True)
+
+# حقل إدخال مخصص بالاتجاه LTR
+رقم_البحث = st.text_input("أدخل الرقم الذي ترغب في البحث عنه:",label_visibility="collapsed")
+
+# عرض الرقم بإتجاه صحيح عند الإدخال (اختياري)
+st.markdown(f"""
+<div style="direction:ltr; background-color:#f1f1f1; padding:10px; border-radius:10px;">
+{رقم_البحث}
+</div>
+""", unsafe_allow_html=True)
+
 st.link_button("اضافة رقم نصاب ", url="https://docs.google.com/forms/d/e/1FAIpQLSe3nP9yS7Bj227inkn5JH_jxI-1PD599qbkMj1QIfLKaHe5YQ/viewform")
 n=رقم_البحث.replace(" ","")
 if st.button("بحث"):
