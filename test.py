@@ -19,7 +19,7 @@ def connect_to_sheet():
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
     creds = ServiceAccountCredentials.from_json_keyfile_dict(st.secrets["google"], scope)
     client = gspread.authorize(creds)
-    sheet_id = "1pnvdIINNVru-ZaoXuzSRBCYGdo2KL4QYa_CfgrNV1f4"
+    sheet_id = "1B5GhDPdkWhdyo39RLStR0o10VDQ77Wlw01DigisNRN0"
     sheet = client.open_by_key(sheet_id).sheet1
     return sheet
 
